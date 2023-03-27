@@ -1,30 +1,32 @@
 package org.pcdd.javadatastructure.queue;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author pcdd
  */
+@Slf4j
 public class LinkedListQueueTest {
     public static void main(String[] args) {
         LinkedListQueue<Integer> queue = new LinkedListQueue<>(3);
-        System.out.println("linkedListQueue.isEmpty() = " + queue.isEmpty());
+        log.info("linkedListQueue.isEmpty() = {}", queue.isEmpty());
         queue.offer(1);
         queue.offer(2);
         queue.offer(3);
         queue.offer(4);
-        System.out.println("linkedListQueue.isEmpty() = " + queue.isEmpty());
+        log.info("linkedListQueue.isEmpty() = {}", queue.isEmpty());
         print(queue);
-        System.out.println("linkedListQueue.size() = " + queue.size());
-
-        System.out.println("linkedListQueue.peek() = " + queue.peek());
-
-        System.out.println("linkedListQueue.poll() = " + queue.poll());
+        log.info("linkedListQueue.size() = {}", queue.size());
+        log.info("linkedListQueue.peek() = {}", queue.peek());
+        log.info("linkedListQueue.poll() = {}", queue.poll());
+        log.info("linkedListQueue.peek() = {}", queue.peek());
         print(queue);
-        System.out.println("linkedListQueue.size() = " + queue.size());
+        log.info("linkedListQueue.size() = {}", queue.size());
     }
 
     static void print(LinkedListQueue<Integer> linkedListQueue) {
         for (Integer integer : linkedListQueue) {
-            System.out.println("Node value: " + integer);
+            log.info("Node value: {}", integer);
         }
     }
 }

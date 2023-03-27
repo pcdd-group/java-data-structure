@@ -1,8 +1,11 @@
 package org.pcdd.javadatastructure.queue;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author pcdd
  */
+@Slf4j
 public class ArrayQueue2Test {
     public static void main(String[] args) {
         ArrayQueue2<Integer> queue = new ArrayQueue2<>(5);
@@ -13,7 +16,7 @@ public class ArrayQueue2Test {
 
         queue.poll();
         for (Integer integer : queue) {
-            System.out.println(integer);
+            log.info("{}", integer);
         }
     }
 }

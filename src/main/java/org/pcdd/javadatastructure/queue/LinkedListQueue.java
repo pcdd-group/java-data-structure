@@ -27,7 +27,6 @@ public class LinkedListQueue<E> implements Queue<E> {
     @Override
     public boolean offer(E value) {
         if (isFull()) {
-            System.out.println("队列已满！");
             return false;
         }
         Node<E> added = new Node<>(value, head);
